@@ -1,0 +1,4 @@
+param(
+    [string]$name = (read-host -prompt 'Enter locked account name"
+    )
+    Get-aduser -filter "name -eq '$name'" | unlock-Adaccount
